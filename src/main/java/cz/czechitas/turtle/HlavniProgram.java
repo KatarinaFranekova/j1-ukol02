@@ -33,16 +33,14 @@ public class HlavniProgram {
         zofka.turnLeft(107);
         zofka.penUp();
         zofka.move(400);
-        zofka.turnLeft(90);
+        zofka.turnLeft(90);hjhjhjhj
 
 
         nakresli10uholnik(130, Color.blue);
-
         nakresli10uholnik(100, Color.red);
-
         nakresli10uholnik(70, Color.orange);
 
-        nakresli10uholnik(30, Color.pink);
+       nakresli10uholnik(30, Color.pink);
 
 
 
