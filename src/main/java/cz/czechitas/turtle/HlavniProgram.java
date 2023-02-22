@@ -7,7 +7,9 @@ import java.awt.*;
 public class HlavniProgram {
     private Turtle zofka = new Turtle();
 
-    
+    Color hlava = new Color(51-204-255);
+    Color spodnaCast = new Color(0-0-204);
+    Color telo = new Color(0-0-255);
     public void start() {
 
         zofka.setLocation(200.0, 200.0);
@@ -34,7 +36,18 @@ public class HlavniProgram {
         zofka.turnLeft(90);
 
 
-        nakresliStvorec(50, Color.yellow);
+        nakresli10uholnik(130, Color.blue);
+
+        nakresli10uholnik(100, Color.red);
+
+        nakresli10uholnik(70, Color.orange);
+
+        nakresli10uholnik(30, Color.pink);
+
+
+
+
+/*        nakresliStvorec(50, Color.yellow);
 
 
         nakresliObdlznik(50, 200, Color.blue);
@@ -43,7 +56,7 @@ public class HlavniProgram {
 
         double stranaT = 100;
         double prepona = Math.sqrt(2*Math.pow(stranaT, 2));
-        nakresliPravRovnoTrojuhol(100, prepona, Color.black);
+        nakresliPravRovnoTrojuhol(100, prepona, Color.black);*/
 
     }
 
@@ -57,7 +70,7 @@ public class HlavniProgram {
     }*/
 
 
-    public void nakresliPravRovnoTrojuhol (double stranaT, double prepona, Color farbaT) {
+   /* public void nakresliPravRovnoTrojuhol (double stranaT, double prepona, Color farbaT) {
        // double prepona = Math.sqrt(2*Math.pow(stranaT, 2));
         zofka.setPenColor(farbaT);
         zofka.penDown();
@@ -95,13 +108,13 @@ public class HlavniProgram {
             zofka.turnRight(90);
             zofka.move(stranaStvorca);
         }
-    }
+    }*/
     public void nakresli10uholnik(double dlzkaStrany, Color farbaCiar)     {
-        zofka.setPenColor(farbaCiar);
+        zofka.setPenColor(farbaCiar);  zofka.penDown();
         for (int i = 0; i <12; i++) {
             zofka.turnLeft(36);
             zofka.move(dlzkaStrany);
-            zofka.penDown();
+
         }
     }
 
