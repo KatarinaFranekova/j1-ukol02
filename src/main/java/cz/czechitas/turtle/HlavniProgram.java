@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class HlavniProgram {
     private Turtle zofka = new Turtle();
-    
+
     
     public void start() {
 
@@ -29,7 +29,22 @@ public class HlavniProgram {
 
 
         zofka.turnLeft(107);
-        zofka.move(270);
+        zofka.penUp();
+        zofka.move(400);
+        zofka.turnLeft(90);
+
+
+        nakresliStvorec(50, Color.yellow);
+
+
+        nakresliObdlznik(50, 200, Color.blue);
+
+        zofka.move(100);
+
+        double stranaT = 100;
+        double prepona = Math.sqrt(2*Math.pow(stranaT, 2));
+        nakresliPravRovnoTrojuhol(100, prepona, Color.black);
+
     }
 
 
@@ -40,6 +55,47 @@ public class HlavniProgram {
             zofka.move(30);
 
     }*/
+
+
+    public void nakresliPravRovnoTrojuhol (double stranaT, double prepona, Color farbaT) {
+       // double prepona = Math.sqrt(2*Math.pow(stranaT, 2));
+        zofka.setPenColor(farbaT);
+        zofka.penDown();
+        zofka.turnRight(45);
+        zofka.move(stranaT);
+        zofka.turnRight(90);
+        zofka.move(stranaT);
+        zofka.turnRight(135);
+        zofka.move(prepona);
+    }
+
+    public void nakresliObdlznik (double stranaA, double stranaB, Color farbaObdlznika) {
+        zofka.setPenColor(farbaObdlznika);
+        for (int o = 0; o < 2; o++) {
+            zofka.penDown();
+            zofka.turnRight(90);
+            zofka.move(stranaA);
+            zofka.turnRight(90);
+            zofka.move(stranaB);
+        }
+
+
+
+
+    }
+
+
+
+
+
+    public void nakresliStvorec (double stranaStvorca, Color farbaStvorca) {
+        zofka.setPenColor(farbaStvorca);
+        for (int s = 0; s < 4; s++) {
+            zofka.penDown();
+            zofka.turnRight(90);
+            zofka.move(stranaStvorca);
+        }
+    }
     public void nakresli10uholnik(double dlzkaStrany, Color farbaCiar)     {
         zofka.setPenColor(farbaCiar);
         for (int i = 0; i <12; i++) {
